@@ -24,7 +24,7 @@ public interface QodService {
   Single<List<Quote>> getAll();
 
   static QodService getInstance() {
-    return InstanceHolder.INSTANCE
+    return InstanceHolder.INSTANCE;
   }
 
   class InstanceHolder {
@@ -48,10 +48,8 @@ public interface QodService {
           .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .client(client)
           .baseUrl(BuildConfig.BASE_URL)
-          .build()
+          .build();
       INSTANCE = retrofit.create(QodService.class);
-
-
     }
 
   }
