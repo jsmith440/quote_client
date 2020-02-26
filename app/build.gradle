@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"http://10.0.2.2:8080/qod/\"" // TODO Replace IP add for device
     }
     buildTypes {
         release {
@@ -21,7 +22,6 @@ android {
         targetCompatibility = 1.8
     }
 }
-
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
