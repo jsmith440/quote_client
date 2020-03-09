@@ -3,13 +3,14 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "edu.cnm.deepdive.quoteclient"
+        applicationId "edu.cnm.deepdive.quoteclient" // needs to match manifest.xml
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "BASE_URL", "\"http://10.0.2.2:8080/qod/\"" // TODO Replace IP add for device
+        buildConfigField "String", "CLIENT_ID", "\"1003493156796-ln2iu34c4itsbe2bn4vpkh2dkfmqkjt0.apps.googleusercontent.com\""
     }
     buildTypes {
         release {
